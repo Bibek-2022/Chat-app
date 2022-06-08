@@ -1,8 +1,8 @@
 import "./App.css";
-import React, { useState, useRef, Component } from "react";
-import firebase from "firebase/app";
-import "firebase/auth";
-import "firebase/firestore";
+import React, { useState, useRef } from "react";
+import firebase from "firebase/compat/app";
+import "firebase/compat/auth";
+import "firebase/compat/firestore";
 import "firebase/analytics";
 
 import { useAuthState } from "react-firebase-hooks/auth";
@@ -124,6 +124,7 @@ function ChatMessage(props) {
           src={
             photoURL || "https://api.adorable.io/avatars/23/abott@adorable.png"
           }
+          alt="avatar"
         />
         <p>{text}</p>
       </div>
